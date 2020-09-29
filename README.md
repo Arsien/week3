@@ -71,12 +71,9 @@ with open(path, 'r', encoding='utf-8') as text:
     words_set = set(words_list)
 
     # 4. 创建字典键值对：key为单词，value为单词出现的频率
-    # 冒号左边为单词，冒号右边为词频
     words_dict = {keyword: words_list.count(keyword) for keyword in words_set}
 
     # 5、根据words_dict中value的值对字典进行排序输出
-
-    # 这里采用了lambda表达式，lambda word: word[1]表示输入一个word词条，返回word[1]（词频）
     # word是一个词条，word[0]是单词，word[1]是单词出现的频率
 
 for word in sorted(words_dict.items(), key=lambda word: word[1], reverse=True):
