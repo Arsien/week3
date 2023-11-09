@@ -1,5 +1,6 @@
-# week3
-#1、input去重
+# 基础解答
+### 1、input去重
+```
 list1 = eval(input('请输入列表list1：'))
 list2 = list(set(list1))
 print(list2)
@@ -12,9 +13,11 @@ for i in list1:
     if not i in list2:
         list2.append(i)
 print(list2)
+```
 
 
-#2、根据demo文件创建demo_new文件
+### 2、根据demo文件创建demo_new文件
+```
 filename = 'demo.py'
 with open(filename, 'r') as fp:
     lines = fp.readlines()
@@ -24,9 +27,10 @@ lines = [line.rstrip().ljust(maxLength)+'#'+str(index)+'\n'
          for index, line in enumerate(lines)]
 with open(filename[:-3]+'_new.py', 'w') as fp:
     fp.writelines( lines)
+```    
     
-    
-#3、输入一个列表，对偶数计数
+### 3、输入一个列表，对偶数计数
+```
 def even_num(x):
     sum=0
     for i in x:
@@ -37,8 +41,10 @@ def even_num(x):
 res=even_num(eval(input('请输入列表lst：')))
 print(res)
 #接收列表输入：lst = eval(input('请输入列表lst：'))
+```
 
-#4、冒泡排序
+### 4、冒泡排序
+```
 def bubble_sort(alist):
     for j in range(1,len(alist) - 1):
         count = 0
@@ -54,9 +60,10 @@ if __name__ == '__main__':
     print('排序前: ',li)
     bubble_sort(li)
     print('排序后: ',li)
+```    
     
-    
-  #5、单词计数
+### 5、单词计数
+```
 import string
 
 path = 'C:/Users/lenovo/Desktop/Walden.txt'
@@ -78,8 +85,11 @@ with open(path, 'r', encoding='utf-8') as text:
 
 for word in sorted(words_dict.items(), key=lambda word: word[1], reverse=True):
     print('{}--{} times'.format(word[0], word[1]))
-    
-    #6、求sin面积
+
+```
+
+### 6、求sin面积
+```
 import math
 n = 10
 width =2*math.pi/n
@@ -95,6 +105,7 @@ print(area)
     # 列表推导式
 s = [abs(math.sin(i*width))*width for i in range(n)]
 print(s)
+```
 
 
 
